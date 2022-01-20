@@ -1,0 +1,12 @@
+<%= link_to 'create blog', new_blog_path %>
+
+<ol>
+<% @blogs.each do |blog| %>
+  <li>
+  <%= blog.title %><br>
+  <%= blog.content %><br>
+  <%= link_to 'edit', edit_blog_path(blog) %>
+  <%= link_to 'destroy', blog_path(blog), method: :delete %>
+  </li>
+<% end %>
+<ol>
